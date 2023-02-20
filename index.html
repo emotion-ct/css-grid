@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .container {
+      display: grid;
+      height: 90vh;
+      grid-template-areas: 'header header header'
+                           'menu main top'
+                           'menu main center'
+                           'menu main bottom'
+                           'footer footer footer';
+      grid-gap: 10px;
+      grid-template-columns: 300px auto 300px;
+      grid-template-rows: 100px 150px auto 150px 100px;
+      color: #fff;
+      font-size: 30px;
+    }
+    .container > div {
+      display: grid;
+      justify-items: center;
+      align-items: center;
+      background: darksalmon;
+      border: 1px solid;
+    }
+    .container .header {grid-area: header; position: sticky; top: 0; left: 0; background: #d7bee2 }
+    .container .menu {grid-area: menu; }
+    .container .main {grid-area: main;}
+    .container .top {grid-area: bottom;}
+    .container .center {grid-area: center;}
+    .container .bottom {grid-area: top;}
+    .container .footer {grid-area: footer;}
+  </style>
+  <body>
+    <div class="container">
+      <div class="header">header</div>
+      <div class="menu">menu</div>
+      <div class="main">main</div>
+      <div class="top">top</div>
+      <div class="center">aside</div>
+      <div class="bottom">bottom</div>
+      <div class="footer">footer</div>
+    </div>
+    <hr/>
+    <img src="./bb.png" alt="" style="margin-top: 100px; width: 90%">
+  </body>
+</html>
